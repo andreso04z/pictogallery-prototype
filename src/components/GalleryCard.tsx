@@ -7,6 +7,7 @@ import {
 } from "./ui/card";
 import CreateButton from "./CreateButton";
 import { Separator } from "./ui/separator";
+import EntryList from "./EntryList";
 
 export default function GalleryCard() {
   return (
@@ -19,21 +20,8 @@ export default function GalleryCard() {
         <CreateButton />
       </CardHeader>
       <Separator />
-      <CardContent>
-        <ul className="flex flex-col gap-4">
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            dolorum laborum quas delectus, vel dolorem dolores libero voluptatem
-            ab molestiae sequi voluptates. Vero earum ipsa, tempore praesentium
-            quos aliquid minus.
-          </li>
-          <li>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eum,
-            obcaecati amet reprehenderit sit dolor praesentium ut laudantium,
-            pariatur optio similique provident nemo magnam! Ipsam temporibus
-            odio inventore dolorem ratione!
-          </li>
-        </ul>
+      <CardContent className="p-0">
+        <EntryList />
       </CardContent>
     </Card>
   );
