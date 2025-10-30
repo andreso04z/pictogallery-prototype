@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import GalleryCard from "./components/GalleryCard";
+import RoomsCard from "./components/RoomsCard";
 import Layout from "./components/Layout";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       </button>
 
       <Layout>
-        <GalleryCard />
+        <RoomsCard />
       </Layout>
     </>
   );

@@ -1,4 +1,4 @@
-export type Entry = {
+export type Room = {
   id: number;
   title: string;
   badge: string;
