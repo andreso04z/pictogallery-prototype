@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import RoomsCard from "./components/RoomsCard";
 import Layout from "./components/Layout";
+import RoomContextProvider from "./components/contexts/RoomContextProvider";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -22,9 +23,11 @@ function App() {
         Toggle {isDark ? "Light Mode" : "Dark Mode"}
       </button>
 
-      <Layout>
-        <RoomsCard />
-      </Layout>
+      <RoomContextProvider>
+        <Layout>
+          <RoomsCard />
+        </Layout>
+      </RoomContextProvider>
     </>
   );
 }
