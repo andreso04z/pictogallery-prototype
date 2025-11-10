@@ -1,3 +1,4 @@
+import type { Message } from "../types/message";
 import type { Room } from "../types/room";
 
 export const mockRooms: Room[] = [
@@ -84,5 +85,22 @@ export const mockRooms: Room[] = [
     badge: "PR",
     username: "priyankarao",
     createdAt: Date.now() - 14 * 24 * 60 * 60 * 1000, // 2 weeks ago
+  },
+];
+
+export const Messages: Message[] = [
+  {
+    id: 1,
+    sender: "johndoe",
+    type: "text",
+    content: "Hey everyone! Excited to start collaborating on this character design.",
+    timestamp: Date.now() - 5 * 60 * 1000, // 5 minutes ago
+  },
+  {
+    id: 2,
+    sender: "sarahadams",
+    type: "text",
+    content: "Hi John! I was thinking we could start with a fantasy theme. What do you think?",
+    timestamp: Date.now() - 4 * 60 * 1000, // 4 minutes ago
   },
 ];

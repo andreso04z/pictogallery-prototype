@@ -1,5 +1,5 @@
 import ThemeButton from "./components/ThemeButton";
-import RoomsCard from "./components/RoomsCard";
+import MainCard from "./components/MainCard";
 import Layout from "./components/Layout";
 import RoomContextProvider from "./components/contexts/RoomContextProvider";
 import ThemeContextProvider from "./components/contexts/ThemeContextProvider";
@@ -10,11 +10,11 @@ function App() {
       <ThemeContextProvider>
         <ThemeButton />
       </ThemeContextProvider>
-      <RoomContextProvider>
-        <Layout>
-          <RoomsCard />
-        </Layout>
-      </RoomContextProvider>
+      <Layout>
+        <RoomContextProvider>
+          <MainCard />
+        </RoomContextProvider>
+      </Layout>
     </>
   );
 }

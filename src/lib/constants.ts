@@ -1,0 +1,1 @@
+export const REMAINING_CHARACTERS = 120;

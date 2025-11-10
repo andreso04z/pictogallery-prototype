@@ -7,12 +7,13 @@ import {
 } from "./ui/card";
 
 import { Separator } from "./ui/separator";
-import RoomList from "./rooms/RoomList";
 import CreateRoomButton from "./CreateRoomButton";
+import ChatView from "./ChatView";
+import RoomsSidebar from "./rooms/RoomsSidebar";
 
-export default function RoomsCard() {
+export default function MainCard() {
   return (
-    <Card className="w-full max-w-2xl">
+    <Card className="w-full max-w-6xl">
       <CardHeader className="flex justify-between items-center">
         <div>
           <CardTitle className="text-2xl">PictoGallery</CardTitle>
@@ -22,8 +23,12 @@ export default function RoomsCard() {
       </CardHeader>
       <Separator />
       <CardContent className="p-0">
-        {/*  Children be <RoomList /> or ChatView */}
-        <RoomList />
+        <div className="flex">
+          <RoomsSidebar />
+          <div className="flex-1">
+            <ChatView />
+          </div>
+        </div>
       </CardContent>
     </Card>
   );
