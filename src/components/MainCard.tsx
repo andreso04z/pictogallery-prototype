@@ -13,17 +13,17 @@ import RoomsSidebar from "./rooms/RoomsSidebar";
 
 export default function MainCard() {
   return (
-    <Card className="w-full max-w-6xl">
-      <CardHeader className="flex justify-between items-center">
+    <Card className="w-full h-190 xl:h-200 2xl:h-210 max-w-6xl lg:max-w-7xl flex flex-col">
+      <CardHeader className="flex justify-between items-center shrink-0">
         <div>
           <CardTitle className="text-2xl">PictoGallery</CardTitle>
           <CardDescription>Active Drawing Rooms</CardDescription>
         </div>
         <CreateRoomButton />
       </CardHeader>
-      <Separator />
-      <CardContent className="p-0">
-        <div className="flex">
+      <Separator className="shrink-0" />
+      <CardContent className="p-0 flex-1 overflow-hidden">
+        <div className="flex h-full">
           <RoomsSidebar />
           <div className="flex-1">
             <ChatView />
